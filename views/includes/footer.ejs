@@ -1,36 +1,90 @@
-<footer class="bg-dark text-white py-4">
-    <div class="container text-center">
-        <div class="d-flex flex-column align-items-center mb-4">
-            <div class="footer-socials">
-                <a href="https://facebook.com" target="_blank" class="fs-4 text-white mx-2 text-decoration-none transition-all hover:text-info hover:scale-110">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
-                <a href="https://instagram.com" target="_blank" class="fs-4 text-white mx-2 text-decoration-none transition-all hover:text-info hover:scale-110">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://linkedin.com" target="_blank" class="fs-4 text-white mx-2 text-decoration-none transition-all hover:text-info hover:scale-110">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
+<footer class="footer bg-dark text-white py-4">
+    <div class="container">
+        <div class="row justify-content-between align-items-center">
+            
+            <!-- Brand Name & Copyright -->
+            <div class="col-lg-4 col-md-12 text-center text-lg-start mb-3 mb-lg-0">
+                <h5 class="footer-brand mb-1">FortStay</h5>
+                <p class="small mb-0">&copy; <span id="year"></span> FortStay. All rights reserved.</p>
             </div>
 
-            <div class="footer-brand">
-                <p>&copy; 2025 FortStay. All rights reserved.</p>
+            <!-- Quick Links -->
+            <div class="col-lg-4 col-md-6 text-center">
+                <ul class="footer-links list-unstyled d-flex justify-content-center mb-0">
+                    <li><a href="/privacy/" class="footer-link">Privacy Policy</a></li>
+                    <li><a href="/terms/" class="footer-link">Terms</a></li>
+                    <li><a href="/contact/" class="footer-link">Contact</a></li>
+                    <li><a href="/faq/" class="footer-link">FAQ</a></li>
+                </ul>
             </div>
 
-            <div class="footer-links mb-4">
-                <a href="/privacy/" class="text-white text-decoration-none fs-6 mx-3 transition-all hover:text-info">Privacy Policy</a>
-                <a href="/terms/" class="text-white text-decoration-none fs-6 mx-3 transition-all hover:text-info">Terms of Service</a>
-                <a href="/contact/" class="text-white text-decoration-none fs-6 mx-3 transition-all hover:text-info">Contact Us</a>
-                <a href="/faq/" class="text-white text-decoration-none fs-6 mx-3 transition-all hover:text-info">FAQ</a>
+            <!-- Social Media Links -->
+            <div class="col-lg-4 col-md-6 text-center text-lg-end">
+                <div class="footer-socials d-flex justify-content-center justify-content-lg-end gap-3">
+                    <a href="https://facebook.com" target="_blank" class="footer-icon"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://instagram.com" target="_blank" class="footer-icon"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank" class="footer-icon"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://twitter.com" target="_blank" class="footer-icon"><i class="fa-brands fa-twitter"></i></a>
+                </div>
             </div>
 
-            <div class="footer-newsletter">
-                <h5>Subscribe to our Newsletter</h5>
-                <form class="d-flex justify-content-center">
-                    <input type="email" placeholder="Enter your email" class="p-2 border-0 rounded-3 w-50" required>
-                    <button type="submit" class="btn btn-info text-white ms-2 rounded-3 hover:bg-teal-600">Subscribe</button>
-                </form>
-            </div>
         </div>
     </div>
 </footer>
+
+<!-- CSS Styling -->
+<style>
+    .footer {
+        font-size: 14px;
+        padding: 15px 0;
+        border-top: 2px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-brand {
+        font-size: 20px;
+        font-weight: bold;
+        color: #17a2b8;
+    }
+
+    .footer-links {
+        display: flex;
+        gap: 15px;
+    }
+
+    .footer-link {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        font-size: 14px;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .footer-link:hover {
+        color: #17a2b8;
+    }
+
+    .footer-icon {
+        font-size: 20px;
+        color: rgba(255, 255, 255, 0.7);
+        transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
+
+    .footer-icon:hover {
+        transform: scale(1.1);
+        color: #17a2b8;
+    }
+
+    @media (max-width: 768px) {
+        .footer {
+            text-align: center;
+        }
+        .footer-links {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+</style>
+
+<!-- JavaScript for Dynamic Year -->
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>

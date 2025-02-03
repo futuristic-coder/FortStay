@@ -1,124 +1,130 @@
 <style>
-  /* Navbar Styling */
-  .navbar {
-      background: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease-in-out;
-  }
-  
-  .navbar-brand {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #2c3e50;
-      display: flex;
-      align-items: center;
-  }
-  
-  /* Logo Styling with Hover Animation */
-  .brand-icon img {
-      width: 35px;
-      height: auto;
-      margin-right: 8px;
-      transition: transform 0.6s ease-in-out;
-  }
-  
-  .brand-icon img:hover {
-      transform: rotate(360deg);
-  }
-  
-  .nav-link {
-      font-weight: 500;
-      color: #2c3e50;
-      transition: all 0.3s ease-in-out;
-  }
-  
-  .nav-link:hover {
-      color: #1abc9c;
-      transform: scale(1.05);
-  }
-  
-  /* Search Bar */
-  .search-box {
-      position: relative;
-      display: flex;
-      align-items: center;
-  }
-  
-  .search-box input {
-      border: none;
-      outline: none;
-      padding: 10px 15px;
-      flex: 1;
-      border-radius: 30px;
-      padding-left: 40px;
-      border: 2px solid #dcdde1;
-      transition: all 0.3s ease-in-out;
-  }
-  
-  .search-box input:focus {
-      border-color: #1abc9c;
-      box-shadow: 0 0 10px rgba(26, 188, 156, 0.5);
-  }
-  
-  .search-box i {
-      position: absolute;
-      left: 15px;
-      color: #aaa;
-  }
-  
-  /* Profile Dropdown */
-  .nav-item.dropdown {
-      position: relative;
-  }
-  
-  .nav-item.dropdown .nav-link {
-      background: #f8f9fa;
-      border-radius: 30px;
-      padding: 8px 15px;
-      transition: background 0.3s ease-in-out;
-  }
-  
-  .nav-item.dropdown .nav-link:hover {
-      background: #1abc9c;
-      color: white;
-  }
-  
-  .dropdown-menu {
-      border-radius: 10px;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      border: none;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-  }
-  
-  .dropdown-item:hover {
-      background: #1abc9c;
-      color: white;
-      border-radius: 5px;
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 992px) {
-      .navbar-collapse {
-          background: rgba(255, 255, 255, 0.95);
-          backdrop-filter: blur(10px);
-          border-radius: 10px;
-          padding: 15px;
-          position: absolute;
-          top: 100%;
-          left: 0;
-          width: 100%;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-          z-index: 1050;
-      }
-      .navbar-nav .nav-link:hover {
-          background: #1abc9c;
-          color: white;
-      }
-  }
-  </style>
+/* Navbar Styling */
+.navbar {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000; /* Darkest black */
+    display: flex;
+    align-items: center;
+}
+
+/* Logo Styling */
+.brand-icon img {
+    width: 35px;
+    height: auto;
+    margin-right: 8px;
+    transition: transform 0.6s ease-in-out;
+}
+
+.brand-icon img:hover {
+    transform: rotate(360deg);
+}
+
+/* Navbar Links */
+.nav-link {
+    font-weight: 500;
+    color: #000 !important; /* Darkest black */
+    transition: transform 1s ease-in-out; /* Smooth enlarge effect */
+}
+
+/* Hover effect: text enlarges */
+.nav-link:hover {
+    transform: scale(1.1);
+}
+
+/* Search Bar */
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    flex: 1;
+    border-radius: 30px;
+    padding-left: 40px;
+    border: 2px solid #dcdde1;
+    transition: all 0.3s ease-in-out;
+    color: #000; /* Darkest black */
+}
+
+.search-box input:focus {
+    border-color: #000; /* Darkest black */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.search-box i {
+    position: absolute;
+    left: 15px;
+    color: #000; /* Darkest black */
+}
+
+/* Profile Dropdown */
+.nav-item.dropdown {
+    position: relative;
+}
+
+.nav-item.dropdown .nav-link {
+    background: #f8f9fa;
+    border-radius: 30px;
+    padding: 8px 15px;
+    color: #000 !important; /* Darkest black */
+    transition: transform 1s ease-in-out; /* Smooth enlarge effect */
+}
+
+/* Hover effect: text enlarges */
+.nav-item.dropdown .nav-link:hover {
+    transform: scale(1.1);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.dropdown-item {
+    color: #000 !important; /* Darkest black */
+    transition: transform 1s ease-in-out; /* Smooth enlarge effect */
+}
+
+/* Hover effect: dropdown items enlarge */
+.dropdown-item:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .navbar-collapse {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        padding: 15px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        z-index: 1050;
+    }
+}
+
+</style>
   
   <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm border-bottom">
     <div class="container d-flex justify-content-between align-items-center">
