@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FortStay</title>
+</head>
+<body>
+        <h3>Create a New Listing</h3>
+        <form method="POST" action="/listings">
+            <input name="listing[title]" placeholder="Enter title" type="text" >
+            <textarea name="listing[description]" placeholder="enter description"></textarea>
+            <input name="listing[image]" type="file" class="form-control">
+            <input name="listing[price]" placeholder="Enter Price" type="number">
+            <input name="listing[country]" placeholder="Enter country" type="text">
+            <input name="listing[location]" placeholder="Enter location" type="text">
+            <button class="btn btn-dark btn-lg">Add</button>
+        </form>
+</body>
+</html>
